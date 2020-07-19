@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video on scroll</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="banner">
+    <video paused muted id="video">
+      <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+    </video>
+  </div>
+  <script>
+    let vid = document.getElementById('video');
+    setInterval(function(){
+      vid.currentTime = window.pageYOffset/1000;
+    },100)
+  </script>
+</body>
+</html>
